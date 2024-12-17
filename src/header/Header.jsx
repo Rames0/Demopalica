@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Header.css";
 import DarkMode from "../DarkMode/DarkMode";
 
+
+
 const Header = () => {
   // Initial list of items
   const items = []; // Example items
@@ -30,8 +32,12 @@ const Header = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  
+
   return (
     <>
+
+
       {/* Dark Mode Button */}
       <div className="headerdark">
         <DarkMode />
@@ -53,6 +59,7 @@ const Header = () => {
         </div>
 
         {/* Fiscal Year Dropdown */}
+        
         <div className="date-year">
           <select id="fiscal-year-select">
             <option value="2076/2077">२०७६/२०७७</option>
@@ -60,11 +67,10 @@ const Header = () => {
             <option value="2078/2079">२०७८/७९</option>
             <option value="2079/2080">२०७९/०८०</option>
             <option value="2080/2081">२०८०/८१</option>
-            <option value="2081/2082" selected>
-              २०८१/०८२
-            </option>
+            <option value="2081/2082">२०८१/०८२</option>
           </select>
         </div>
+
 
         {/* Search Section */}
         <div className="search-container">
@@ -91,21 +97,22 @@ const Header = () => {
           </ul>
           
         </div>
+
         <div className="header">
-        <h4>Hello User</h4>
+        <p>Hello User</p>
         </div>
         
 
         {/* Dropdown Menu */}
-      <div className="dropdown-container">
+      <div className="dropdowns-container">
         {/* Dropdown Trigger */}
-        <button className="dropdown-toggle" onClick={toggleDropdown}>
+        <button className="dropdowns-toggle" onClick={toggleDropdown}>
           ⚙️
         </button>
 
         {/* Dropdown Menu */}
         {isDropdownOpen && (
-          <ul className="dropdown-menu">
+          <ul className="dropdowns-menu">
             {/* Top-Level Menu */}
             <li className="menu-item">
               <span>⚙️ योजना सेटिङ</span>

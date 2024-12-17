@@ -7,12 +7,42 @@
 
 /* Main container */
 .headmain {
+  position: fixed;
   width: 100%;
   height: 12vh;
   background: linear-gradient(to right, #68f37f, #1348aa);
   display: flex;
   align-items: center;
-  padding: 10px;
+  z-index: 100;
+  background-size: 200% 200%;
+  filter: drop-shadow(0 0 8px rgb(0, 0, 0));
+  animation: gradientBackground 8s ease infinite;
+  -webkit-animation: gradientBackground 8s ease infinite;
+}
+
+/* Background animation */
+@-webkit-keyframes gradientBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 body {
@@ -21,12 +51,13 @@ body {
 }
 
 .headerdark {
-  position: absolute; /* Position it relative to the viewport */
-  /* Position it 10px from the top */
-  left: 50%; /* Center it horizontally */
+  position: fixed; /* Position it relative to the viewport */
+  top: 6px;/* Position it 10px from the top */
+  left: 70%; /* Center it horizontally */
    /* Adjust position to make it perfectly centered */
   z-index: 1000;
-   /* Ensure it stays on top of other elements */
+  width: 10%;
+  
 }
 
 
@@ -43,27 +74,35 @@ body {
    /* Space between elements */
 }
 
-/* Logo section */
-.imageheader img {
-  max-width: 120px; /* Ensures the logo doesn't get too large */
-  height: auto;
-  padding: 20px;
-  margin-top: 5px;
-}
 
 /* Name section */
 .header h2 {
   font-size: 1cm;
   text-align: center;
-  color: #000; /* Change to desired color */
+  color: #000; 
+  margin-top: 10px;
+  margin-left: 25%;
+  
+
+} 
+
+/* Logo section */
+.imageheader img {
+  max-width: 120px; /* Ensures the logo doesn't get too large */
+  height: auto;
+  padding: 20px;
+  margin-top: 15px;
 }
+
+
 
 /* Fiscal year selection */
 .date-year {
-  width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+  font-size: 16px;
 }
 
 #fiscal-year-select {
@@ -71,7 +110,12 @@ body {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: #fff;
+  color: #000;
 }
+
+/* Dark mode styles for dropdown */
+
 
 /* SearchBox component alignment */
 .header > div:last-child {
@@ -89,8 +133,16 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.headmain h3{
-  color: rgb(0, 0, 0);
+
+
+
+
+
+
+.header p {
+  color: #000000;
+  font-size: 0.6cm;
+  margin-left: 50%;
   width: 50%;
 }
 
@@ -99,23 +151,22 @@ body {
   color: #ffffff; /* White text */
 }
 
-.logo {
-  height: 50px;
+.dark-mode .header h2 {
+  color: #ffffff; /* White text for header title in dark mode */
 }
-
-.header h2 {
-  color: #000000;
-}
-
-.headmain.dark-mode .header h2 {
+.dark-mode .header p {
   color: #ffffff; /* White text for header title in dark mode */
 }
 
+.dark-mode #fiscal-year-select {
+  background-color: #333333; /* Dark background for dropdown */
+  color: #ffffff; /* White text */
+}
 
-
-.headmain.dark-mode .date-year {
+.dark-mode .date-year {
   background-color: #444444; /* Dark background for fiscal year dropdown */
   color: white;
+  border-radius: 5px;
 }
 
 select {
@@ -123,85 +174,21 @@ select {
   color: #333;
 }
 
-.headmain.dark-mode select {
+.dark-mode select {
   background-color: #333333; /* Dark background for select in dark mode */
   color: #ffffff; /* White text */
 }
 
 
 
-.headmain.dark-mode .dark-mode-toggle button {
+.dark-mode .dark-mode-toggle button {
   color: white; /* White text for dark mode toggle button */
 }
 
 
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .headmain{
-    height: 5vh;
-  }
-  .header {
-    
-    align-items: center;
-    text-align: center;
-  }
 
-  .header h2{
-    
-    font-size: 0.5cm;
-    padding-top: 19px;
- 
-  }
-  .header h4{
-    
-    font-size: 0.3cm;
-    
- 
-  }
-
-  .date-year {
-    margin: 10px 0;
-    display: grid;
-    width: 100%;
-    padding-left: -15px;
-  }
-
-  .imageheader img {
-    max-width: 100px;
-    padding-bottom: 7px;
-    
-  }
-}
-
-@media (max-width: 480px) {
-  .header h2 {
-    margin-left: -15px;
-    font-size: 0.4cm;
-  }
-
-  #fiscal-year-select {
-    font-size: 0.9rem;
-    width: 100%;
-     /* Full width dropdown for smaller screens */
-  }
-  .date-year {
-    height: 5vh;
-    display: grid;
-    width: 100%;
-    padding-left: -20px;
-  }
-
-  .imageheader img {
-    max-width: 80px;
-    margin-left: -25px;
-  }
-
-  .header {
-    padding: 10px;
-  }
-}
 
 
 
@@ -211,7 +198,7 @@ select {
 /* Light Mode Styles */
 .search-container {
   
-  width: 80%;
+  width: 100%;
   
   box-sizing: border-box;
 }
@@ -219,8 +206,8 @@ select {
 .search-input {
   width: 70%;
   padding: 10px;
-  top: 50%;
-  
+  margin-left: 30%;
+  height: 4.1vh;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 16px;
@@ -245,15 +232,21 @@ select {
   text-align: center;
 }
 
-/* Dark Mode Styles */
-.search-container.dark-mode {
-  background-color: #333;
-}
-
-.search-input.dark-input {
+.dark-mode.search-container {
   background-color: #444;
   color: #fff;
-  border: 1px solid #666;
+  
+}
+
+.dark-mode.search-input {
+  background-color: #444;
+  color: #fff;
+  
+}
+.dark-mode.search-item {
+  background-color: #444;
+  color: #fff;
+  
 }
 
 .search-item {
@@ -270,25 +263,7 @@ select {
 
 
 /* Responsive Design */
-@media (max-width: 600px) {
-  .search-container {
-    padding: 15px;
-    max-width: 100%; /* Full width on small screens */
-  }
 
-  .search-input {
-    font-size: 14px;
-    padding: 8px; /* Smaller padding on mobile */
-  }
-
-  .search-item {
-    font-size: 14px;
-    padding: 8px;
-  }
-  .dropdown-toggle{
-    margin-left: 50px;
-  }
-}
 
 
 
@@ -296,17 +271,16 @@ select {
 /* Setting */
 
 /* Dropdown Container */
-.dropdown-container {
+.dropdowns-container {
   position: relative;
-  
-  width: 70%;
+  z-index: 1000;
   
 }
 
 /* Dropdown Button */
-.dropdown-toggle {
+.dropdowns-toggle {
   background-color: transparent;
-  margin-left: 200px;
+  
   font-size: 20px;
   border: none;
   padding: 10px 15px;
@@ -316,16 +290,17 @@ select {
 }
 
 /* Dropdown Menu */
-.dropdown-menu {
+.dropdowns-menu {
   position: absolute;
-  top: 100%;
-  left: 5%;
+  top: 70px;
+  right: 1px;
+
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-  width: 250px;
+  
+  width: 200px;
   z-index: 1000;
   list-style: none;
  
@@ -338,7 +313,7 @@ select {
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: background 0.2s;
+  
   border-bottom: 1px solid #000000;
 }
 
@@ -376,32 +351,163 @@ select {
 }
 
 
+
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
-  .dropdown-menu {
-    width: 120%; /* Full width on mobile */
-    right: 0;
-    left: 0;
-    margin-top: 480px;
-    position: static;
-    box-shadow: none;
-    border: none;
+  .headmain{
+    height: 5vh;
+  }
+  .header {
+    
+    align-items: center;
+    text-align: center;
+  }
+
+  .header h2{
+    
+    font-size: 0.5cm;
+    
+ 
+  }
+  
+
+  .date-year {
+    
+    display: grid;
+    width: 50%;
+    
+  }
+
+  .imageheader img {
+    max-width: 100px;
+    padding-bottom: 7px;
     
   }
 
   .menu-item {
-    width: 100%;
+    
     font-size: 0.4rem;
     padding: 8px 10px;
   }
 
-  .dropdown-toggle {
+  
+
+  .search-container {
+    font-size: 0.7em;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px; /* Smaller padding on mobile */
     width: 100%;
-    font-size: 1.2rem;
-    padding: 1px;
-    margin-left: 21px;
-    position: relative;
-    
+  }
+
+  .search-item {
+    font-size: 0.7em;
+    padding: 8px;
+  }
+ 
+}
+
+@media (max-width: 600px) {
+  .search-container {
+    padding: 15px;
+    display: none;
+     /* Full width on small screens */
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px; /* Smaller padding on mobile */
   }
   
+
+  .search-item {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 0.4cm;
+    margin-left: -20px;
+    padding-top: 10px;
+  }
+
+  #fiscal-year-select {
+    font-size: 0.7rem;
+    width: 100%;
+     /* Full width dropdown for smaller screens */
+  }
+  .date-year {
+
+    
+    display: grid;
+    /* display: none; */
+    width: 80%;
+    margin-left: -20px;
+   
+  }
+  .headerdark {
+    position: absolute;
+    top: -13px;
+    left: 65%; /* Adjust to fit your layout */
+    z-index: 1000;
+    width: 130px; /* Smaller width */
+     /* Smaller height */
+    
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  
+  .imageheader img {
+    max-width: 80px;
+    margin-left: -30px;
+    margin-top: 10%;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .header p{
+    margin-left: -10px;
+    font-size: 0.3cm;
+     
+ 
+  }
+
+  .search-container {
+    font-size: 0.7em;
+    }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px; /* Smaller padding on mobile */
+    width: 100%;
+  }
+
+  .search-item {
+    font-size: 0.7em;
+    padding: 8px;
+  }
+ 
+  .dropdowns-menu {
+    top: 50px;
+    width: 100px;
+    box-shadow: none;
+    border: none;
+    
+  }
+ 
+  .dropdowns-container{
+    left: 20px;
+  }
 }

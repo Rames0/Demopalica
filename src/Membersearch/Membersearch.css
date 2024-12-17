@@ -1,0 +1,197 @@
+/* Main container */
+.member-container {
+    position: fixed;
+    top: 89px;
+    width: 100%;
+    
+    background: white;
+    padding: 20px;
+    
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    transition: margin-left 0.3s ease; /* Smooth transition */
+  }
+  
+  .dark-mode .member-container
+  {
+    background: rgb(0, 0, 0);
+    color:white;
+  }
+  /* Sidebar active state - shifts container when sidebar opens */
+  .member-container.sidebar-active {
+    margin-left: 250px; /* Adjusted for the sidebar width */
+    width: 84%;
+  }
+  
+
+  /* Sidebar Styling */
+  .sidebar {
+    position: fixed;
+    top: 89px; /* Align with header */
+    left: -250px; /* Initially hidden */
+    width: 84%;
+    height: 84%;
+    
+    background-color: #0288d1;
+    color: white;
+    transition: left 0.3s ease; /* Smooth slide-in transition */
+    z-index: 99; /* Ensure it is above other content */
+    padding: 20px;
+  }
+  
+  /* Sidebar active state - slides sidebar into view */
+  .sidebar-active.sidebar {
+    left: 0;
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  
+  .filter-input select {
+    padding: 5px;
+  }
+  
+  .filter-buttons button {
+    margin: 5px;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .search-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .reset-btn {
+    background-color: #ff5722;
+    color: white;
+  }
+  
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .table-header input {
+    padding: 5px;
+    margin-left: 10px;
+  }
+  
+  .export-btn,
+  .print-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #0288d1;
+    color: white;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Media Queries for Responsiveness */
+
+/* For tablets and small screens */
+@media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+  
+    .member-container.sidebar-active {
+      margin-left: 200px;
+    }
+  
+    .filter-section {
+      flex-direction: column;
+    }
+  
+    .table-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    table,
+    th,
+    td {
+      font-size: 14px;
+    }
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 100%;
+      left: -100%;
+    }
+  
+    .sidebar.sidebar-active {
+      left: 0;
+    }
+  
+    .member-container.sidebar-active {
+      margin-left: 0;
+    }
+  
+    .filter-section {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .filter-input,
+    .table-header input {
+      width: 100%;
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  
+    th,
+    td {
+      padding: 5px;
+    }
+  
+    .export-btn,
+    .print-btn {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  }

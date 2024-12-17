@@ -1,0 +1,196 @@
+.dashboard-wrapper {
+    display: flex;
+  }
+  
+  .hamburger-icon {
+    position: fixed;
+    top: 30px;
+    left: 250px;
+    z-index: 101;
+  }
+  
+  .hamburger-toggle {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+  }
+  
+
+  
+  
+
+  
+  .main-content {
+    
+    width: 100%;
+    margin-top: 89px;
+    z-index: 99;
+    
+    transition: 0.3s ease;
+    background: rgb(255, 255, 255);
+    
+  }
+  
+  .main-content.sidebar-active {
+    margin-left: 250px;
+  }
+  
+  .card-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .info-card {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+  }
+  
+  .green-card {
+    background-color: #e6f7e6;
+  }
+  
+  .blue-card {
+    background-color: #e6f3ff;
+  }
+  
+  .purple-card {
+    background-color: #f3e6ff;
+  }
+  
+  .red-card {
+    background-color: #ffe6e6;
+  }
+  
+  .dark-card {
+    background-color: #d3d3d3;
+  }
+  
+  .house-icon {
+    font-size: 40px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .card-number {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .section-heading {
+    
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+  }
+
+  .dark-mode .main-content{
+    background: rgb(0, 0, 0);
+    color:white;
+  }
+  .dark-mode  .section-heading {
+   
+    color:white;
+  }
+  
+  .dark-mode.info-card {
+    background-color: #000000;
+  }
+  
+  .dark-mode.blue-card {
+    background-color: #000000;
+  }
+  
+  .dark-mode.purple-card {
+    background-color: #f3e6ff;
+  }
+  
+  .dark-mode.red-card {
+    background-color: #ffe6e6;
+  }
+  
+  .dark-mode.dark-card {
+    background-color: #d3d3d3;
+  }
+
+  /* Media Queries for Responsiveness */
+
+/* Tablets and Small Screens */
+@media (max-width: 768px) {
+  .main-content.sidebar-active {
+    
+    margin-left: 0; /* Disable sidebar margin on tablets */
+  }
+
+  .info-card {
+    width: 45%; /* Two cards per row on tablets */
+    margin: 10px 5px;
+  }
+
+  .section-heading {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .hamburger-icon {
+    
+    top: 12px;
+    left: 140px;
+  }
+  
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .main-content {
+    
+    left: 50px;
+    margin-top: 48px;/* Adjust space for smaller headers */
+  }
+  .main-content.sidebar-active {
+    
+    margin-left: 160px; /* Disable sidebar margin on tablets */
+  }
+
+  .info-card {
+    width: 100%; /* One card per row on mobile */
+    margin: 10px 0;
+  }
+
+  .section-heading {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-number {
+    font-size: 28px;
+  }
+
+  
+
+  .hamburger-icon {
+    position: fixed;
+   left: 140px;
+  }
+  
+}

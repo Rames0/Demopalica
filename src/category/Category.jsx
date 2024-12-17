@@ -2,19 +2,28 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./Category.css";
-import DarkMode from "../DarkMode/DarkMode";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers, faSearch, faHandshake, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+
 
 
 const Category = () => {
+  
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleDropdown = (index) => {
     setOpenDropdown(openDropdown === index ? null : index);
   };
 
+ 
+
+
   return (
     <>
-    <div className="category-box">
+      
+
+      {/* Sidebar Menu */}
+      <div className="category-box">
       {/* Fiscal Year Section */}
       <div className="category-header">
         <h4>चालु आर्थिक वर्ष: २०८१/०८२</h4>
@@ -31,11 +40,35 @@ const Category = () => {
           <p>मुख्य पृष्‍ठ</p>
         </NavLink>
 
-        {/* Office */}
-        <NavLink to="/office" className="sidebar-option" exact activeClassName="active">
-          <span>🏢</span>
+        {/* Admin Dropdown */}
+        <div
+          className={`sidebar-option ${openDropdown === 1 ? "open" : ""}`}
+          onClick={() => toggleDropdown(1)}
+        >
+          <span>💻</span>
           <p>कार्यालय</p>
-        </NavLink>
+          <i className={`fa ${openDropdown === 1 ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
+        </div>
+        {openDropdown === 1 && (
+          <div className="dropdown">
+            <NavLink to="/Office" className="sidebar-option" exact activeClassName="active">
+            <FontAwesomeIcon icon={faUsers}/>
+              <p>कार्यालय संरचना</p>
+            </NavLink>
+            <NavLink to="/Membersearch" className="sidebar-option" exact activeClassName="active">
+            <FontAwesomeIcon icon={faSearch} color="green" />
+              <p>सदस्य खोज्नुहोस्</p>
+            </NavLink>
+            <NavLink to="/admin/goods" className="sidebar-option" exact activeClassName="active">
+            <FontAwesomeIcon icon={faHandshake} color="orange" />
+              <p>टोल बिकास संस्था संरचना</p>
+            </NavLink>
+            <NavLink to="/admin/goods" className="sidebar-option" exact activeClassName="active">
+            <FontAwesomeIcon icon={faPaperPlane} color="red" />
+              <p>टोल बिकास संस्था थप्नुहोस्</p>
+            </NavLink>
+          </div>
+        )}
         
 
         {/* Communication */}
@@ -47,14 +80,14 @@ const Category = () => {
 
         {/* Admin Dropdown */}
         <div
-          className={`sidebar-option ${openDropdown === 1 ? "open" : ""}`}
-          onClick={() => toggleDropdown(1)}
+          className={`sidebar-option ${openDropdown === 2 ? "open" : ""}`}
+          onClick={() => toggleDropdown(2)}
         >
           <span>💻</span>
           <p>प्रशासन अभिलेख</p>
-          <i className={`fa ${openDropdown === 1 ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
+          <i className={`fa ${openDropdown === 2 ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
         </div>
-        {openDropdown === 1 && (
+        {openDropdown === 2 && (
           <div className="dropdown">
             <NavLink to="/admin/registration" className="sidebar-option" exact activeClassName="active">
               <p>दर्ता / चलानी</p>
@@ -71,14 +104,14 @@ const Category = () => {
 
         {/* Justice Dropdown */}
         <div
-          className={`sidebar-option ${openDropdown === 2 ? "open" : ""}`}
-          onClick={() => toggleDropdown(2)}
+          className={`sidebar-option ${openDropdown === 3 ? "open" : ""}`}
+          onClick={() => toggleDropdown(3)}
         >
           <span>⚖️</span>
           <p>न्याय</p>
-          <i className={`fa ${openDropdown === 2 ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
+          <i className={`fa ${openDropdown === 3 ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
         </div>
-        {openDropdown === 2 && (
+        {openDropdown === 3 && (
           <div className="dropdown">
             <NavLink to="/justice/court" className="sidebar-option" exact activeClassName="active">
               <p>अदालत</p>

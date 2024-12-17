@@ -1,15 +1,32 @@
-/* Container Styling */
+
+
+/* Adjust category-box for toggle functionality */
 .category-box {
-  /* Other styling for the category box */
+  position: fixed;
+  top: 89.4px;
+  
+  height: 100%;
   width: 250px;
-  padding: 0;
+  background-color: #fff;
+  transition: left 0.3s ease;
+  
+  filter: drop-shadow(0 8px 8px rgb(0, 0, 0));
 }
+
+/* When the menu is open */
+.category-box.menu-open {
+  left: 0; /* Slide into view */
+}
+
+
+
+
 
 .category-list {
   
   padding: 0;
   margin: 0;
-  height: 88vh;  /* Adjust the height as needed */
+  height: 79.9vh;  /* Adjust the height as needed */
   overflow-y: auto;
   text-decoration: none;  /* Makes the menu scrollable */
 }
@@ -103,12 +120,14 @@
 /* Dark mode specific styles for the category box */
 .dark-mode .category-box {
   background-color: #1e1e1e;
+  filter: drop-shadow(0 0 8px rgb(255, 255, 255));
 }
 
 .dark-mode .category-header {
   background-color: #000000; /* Darker color for header */
   color: white;
   border: 1px solid white;
+  filter: drop-shadow(0 0 8px rgb(255, 255, 255));
 }
 
 .dark-mode .category-list p{
@@ -142,9 +161,14 @@
   @media (max-width: 768px) {
     /* Change category-box width on smaller screens */
     .category-box {
+      top: 20%;
       width: 200px; /* Slightly smaller sidebar */
       
     }
+
+    
+    
+    
   
     .category-header {
       font-size: 12px; /* Adjust font size for mobile */
@@ -156,6 +180,7 @@
        /* Reduce padding for smaller screens */
     }
     .category-list{
+      
       height: 69.5vh;
     }
   
@@ -168,20 +193,23 @@
     /* Adjust sidebar width even more on very small screens */
     .category-box {
       width: 37%; /* Full width on very small screens */
-      position: relative; /* Make the sidebar not fixed */
+      
+      top: 5.8%; /* Make the sidebar not fixed */
     }
+    
   
     .category-header {
       font-size: 10px; /* Adjust font size even further */
       padding: 6px;
     }
     .category-list{
-      height: 77vh;
+      height: 80vh;
+      
     }
   
     .category-list li {
       padding: 6px 8px;
-      height: 100vh; /* Reduce padding more */
+       /* Reduce padding more */
     }
   
     .icon {

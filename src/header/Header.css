@@ -454,7 +454,7 @@ select {
    
   }
   .headerdark {
-    position: absolute;
+    position: fixed;
     top: -13px;
     left: 65%; /* Adjust to fit your layout */
     z-index: 1000;

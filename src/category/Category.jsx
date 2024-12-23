@@ -35,7 +35,7 @@ const Category = () => {
         
       
         {/* Main Page */}
-        <NavLink to="/Chart" className="sidebar-option" exact activeClassName="active">
+        <NavLink to="/Chart" className="sidebar-option" >
           <span>🏠</span>
           <p>मुख्य पृष्‍ठ</p>
         </NavLink>
@@ -51,19 +51,19 @@ const Category = () => {
         </div>
         {openDropdown === 1 && (
           <div className="dropdown">
-            <NavLink to="/Office" className="sidebar-option" exact activeClassName="active">
+            <NavLink to="/Office" className="sidebar-option1" >
             <FontAwesomeIcon icon={faUsers}/>
               <p>कार्यालय संरचना</p>
             </NavLink>
-            <NavLink to="/Membersearch" className="sidebar-option" exact activeClassName="active">
+            <NavLink to="/Membersearch" className="sidebar-option1" >
             <FontAwesomeIcon icon={faSearch} color="green" />
               <p>सदस्य खोज्नुहोस्</p>
             </NavLink>
-            <NavLink to="/admin/goods" className="sidebar-option" exact activeClassName="active">
+            <NavLink to="/Membergroup" className="sidebar-option1" >
             <FontAwesomeIcon icon={faHandshake} color="orange" />
               <p>टोल बिकास संस्था संरचना</p>
             </NavLink>
-            <NavLink to="/admin/goods" className="sidebar-option" exact activeClassName="active">
+            <NavLink to="/MemberGroupAdd" className="sidebar-option1" >
             <FontAwesomeIcon icon={faPaperPlane} color="red" />
               <p>टोल बिकास संस्था थप्नुहोस्</p>
             </NavLink>
@@ -72,7 +72,7 @@ const Category = () => {
         
 
         {/* Communication */}
-        <NavLink to="/communication" className="sidebar-option" exact activeClassName="active">
+        <NavLink to="/communication" className="sidebar-option" >
           <span>📞</span>
           <p>संचार</p>
         </NavLink>
@@ -89,13 +89,13 @@ const Category = () => {
         </div>
         {openDropdown === 2 && (
           <div className="dropdown">
-            <NavLink to="/admin/registration" className="sidebar-option" exact activeClassName="active">
+            <NavLink to="/admin/registration" className="sidebar-option1" >
               <p>दर्ता / चलानी</p>
             </NavLink>
-            <NavLink to="/admin/plans" className="sidebar-option" exact activeClassName="active">
+            <NavLink to="/admin/plans" className="sidebar-option1" >
               <p>योजना</p>
             </NavLink>
-            <NavLink to="/admin/goods" className="sidebar-option" exact activeClassName="active">
+            <NavLink to="/admin/goods" className="sidebar-option1" >
               <p>जिन्सी</p>
             </NavLink>
           </div>
@@ -113,10 +113,10 @@ const Category = () => {
         </div>
         {openDropdown === 3 && (
           <div className="dropdown">
-            <NavLink to="/justice/court" className="sidebar-option" exact activeClassName="active">
+            <NavLink to="/justice/court" className="sidebar-option1" >
               <p>अदालत</p>
             </NavLink>
-            <NavLink to="/justice/laws" className="sidebar-option" exact activeClassName="active">
+            <NavLink to="/justice/laws" className="sidebar-option1" >
               <p>कानूनी</p>
             </NavLink>
           </div>
@@ -124,30 +124,30 @@ const Category = () => {
         
 
         {/* Other Links */}
-        <NavLink to="/home-map" className="sidebar-option" exact activeClassName="active">
+        <NavLink to="/home-map" className="sidebar-option" >
           <span>🏠</span>
           <p>घर, नक्सा</p>
         </NavLink>
         
-        <NavLink to="/employment" className="sidebar-option" exact activeClassName="active">
+        <NavLink to="/employment" className="sidebar-option" >
           <span>🌞</span>
           <p>रोजगार</p>
         </NavLink>
         
-        <NavLink to="/library" className="sidebar-option" exact activeClassName="active">
+        <NavLink to="/library" className="sidebar-option" >
           <span>📚</span>
           <p>पुस्तकालय</p>
         </NavLink>
         
-        <NavLink to="/tax" className="sidebar-option" exact activeClassName="active">
+        <NavLink to="/tax" className="sidebar-option" >
           <span>💰</span>
           <p>कर</p>
         </NavLink>
         <NavLink
           to="/hospital-management"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>🏥</span>
           <p>अस्पताल व्यवस्थापन</p>
@@ -157,8 +157,8 @@ const Category = () => {
         <NavLink
           to="/education"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>🎓</span>
           <p>शिक्षा</p>
@@ -167,8 +167,8 @@ const Category = () => {
         <NavLink
           to="/payroll"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>💵</span>
           <p>पेरोल सेटिंग</p>
@@ -177,8 +177,8 @@ const Category = () => {
         <NavLink
           to="/meetings"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>🗓️</span>
           <p>बैठक ब्यवस्थापन</p>
@@ -187,8 +187,8 @@ const Category = () => {
         <NavLink
           to="/municipal-profile"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>🏢</span>s
           <p>नगर प्रोफाइल</p>
@@ -197,8 +197,8 @@ const Category = () => {
         <NavLink
           to="/schedule"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>📅</span>
           <p>समय तालिका</p>
@@ -207,8 +207,8 @@ const Category = () => {
         <NavLink
           to="/suggestions"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>💡</span>
           <p>सिफारिस</p>
@@ -217,8 +217,8 @@ const Category = () => {
         <NavLink
           to="/registration-certificate"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>📜</span>
           <p>दर्ता प्रमाण पत्र</p>
@@ -227,8 +227,8 @@ const Category = () => {
         <NavLink
           to="/disaster-management"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>🔥</span>
           <p>विपद ब्यवस्थापन</p>
@@ -237,8 +237,8 @@ const Category = () => {
         <NavLink
           to="/e-riksha"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>🚲</span>
           <p>E-Riksha</p>
@@ -247,8 +247,8 @@ const Category = () => {
         <NavLink
           to="/management"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>⚙️</span>
           <p>व्यवस्थापन</p>
@@ -257,8 +257,8 @@ const Category = () => {
         <NavLink
           to="/meeting-management"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>👥</span>
           <p>बैठक ब्यवस्थापन</p>
@@ -267,8 +267,8 @@ const Category = () => {
         <NavLink
           to="/food-monitoring"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>🍽️</span>
           <p>खाधन्न अनुगमन</p>
@@ -277,8 +277,8 @@ const Category = () => {
         <NavLink
           to="/grants"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>💸</span>
           <p>अनुदान</p>
@@ -287,8 +287,8 @@ const Category = () => {
         <NavLink
           to="/relief"
           className="sidebar-option"
-          exact
-          activeClassName="active"
+          
+          
         >
           <span>❤️</span>
           <p>बिपन्न</p>

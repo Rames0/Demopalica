@@ -1,0 +1,101 @@
+.MemberGroupAdd {
+    padding: 20px;
+    background-color: white;
+    max-width: 82%;
+    position: relative;
+    top: 85px;
+    left: 250px;
+    z-index: 99;
+    transition: margin-left 0.3s ease;
+    
+  }
+  
+  .MemberGroupAdd .sidebar-active{
+    margin-left: 500px;
+    width: 100%;
+  }
+  
+  h2, h3 {
+    text-align: center;
+  }
+  
+  .MemberAddform {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #000000;
+  }
+  
+  .btn-edit {
+    margin-right: 5px;
+    background-color: #ffc107;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    color: white;
+  }
+
+
+  /* @media (max-width: 768px){
+    
+  }
+
+  @media (max-width: 480px){
+    .MemberGroupAdd{
+        
+    }  
+
+  } */

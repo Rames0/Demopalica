@@ -1,0 +1,156 @@
+/* Corrected Sidebar Active State */
+.tol-container.sidebar-active {
+    margin-left: 250px;
+    width: 83.55%;
+    
+    
+  }
+  
+  /* Main Container */
+  .tol-container {
+    position: absolute;
+    size: 200% 200%;
+    width: 100%;
+    top: 90.5px;
+    height: 100vh;
+    left: 0;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    font-family: Arial, sans-serif;
+    transition: margin-left 0.3s ease; /* Smooth transition for sidebar */
+  }
+  
+
+  .dark-mode .tol-container{
+    background: black;
+    color: white;
+    height: 150vh;
+  }
+
+  .more-section {
+    margin-top: 20px;
+  }
+  
+  .more-button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  
+  .tol-title {
+    color: #00796b;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .tol-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .tol-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tol-card__icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+ /* Light Green */
+.tol-card--light-green {
+    background-color: #d4edda; /* Light green shade */
+    color: #155724;
+  }
+  
+  /* Light Blue */
+  .tol-card--light-blue {
+    background-color: #d6eaf8; /* Light blue shade */
+    color: #1b4f72;
+  }
+  
+  /* Light Purple */
+  .tol-card--light-purple {
+    background-color: #ebdef0; /* Light purple shade */
+    color: #6c3483;
+  }
+  
+  /* Light Gray (light dark-blue alternative) */
+  .tol-card--light-gray {
+    background-color: #d5dbdb; /* Light gray shade */
+    color: #34495e;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .tol-container{
+        top: 47px;
+        background: white;
+        height: auto;
+    }
+    .tol-container.sidebar-active{
+      height: auto;
+    } 
+
+    .tol-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  
+    .tol-title {
+      font-size: 20px;
+    }
+  
+    .more-button {
+      font-size: 14px;
+    }
+  
+    .tol-card__content h3 {
+      font-size: 16px;
+    }
+  
+    .tol-card__content p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+
+
+    .tol-container.sidebar-active{
+        width: 63%;
+        left: -90px;
+    }
+    .tol-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  
+    .tol-title {
+      font-size: 18px;
+    }
+  
+    .tol-card__icon {
+      font-size: 30px;
+    }
+  
+    .tol-card__content h3 {
+      font-size: 14px;
+    }
+  
+    .tol-card__content p {
+      font-size: 12px;
+    }
+  }

@@ -4,8 +4,8 @@
   
   .hamburger-icon {
     position: fixed;
-    top: 30px;
-    left: 250px;
+    top: 22px;
+    left: 230px;
     z-index: 101;
   }
   
@@ -17,13 +17,7 @@
     z-index: 101;
   }
   
-
-  
-  
-
-  
   .main-content {
-    
     width: 100%;
     margin-top: 89px;
     z-index: 99;
@@ -149,8 +143,8 @@
 
   .hamburger-icon {
     
-    top: 12px;
-    left: 140px;
+    top: 2px;
+    left: 130px;
   }
   
 }
@@ -158,9 +152,9 @@
 /* Mobile Devices */
 @media (max-width: 480px) {
   .main-content {
-    
+    padding: 20px;
     left: 50px;
-    margin-top: 48px;/* Adjust space for smaller headers */
+    margin-top: 35px;/* Adjust space for smaller headers */
   }
   .main-content.sidebar-active {
     
@@ -190,7 +184,7 @@
 
   .hamburger-icon {
     position: fixed;
-   left: 140px;
+   left: 130px;
   }
   
 }

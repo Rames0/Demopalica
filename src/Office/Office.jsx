@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Office.css'; // Import your CSS file
-import icondd from '../../public/icon.png';
-import DarkMode from "../DarkMode/DarkMode";
+import icondd from '../Asset/icon.png';
 
-const Dashboard = () => {
+
+const Office = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
   const toggleSidebar = () => {
@@ -87,4 +87,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Office;

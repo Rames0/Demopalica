@@ -39,6 +39,13 @@
     
   }
 
+  .sidebar-option1
+  {
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+    
+  }
+
   .category-list i{
     padding-left: 50px;
     justify-content: end;
@@ -67,14 +74,25 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+  .category-list .sidebar-option1 {
+    background-color: #d1d1d1;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
   
   .category-list .sidebar-option:hover {
     background-color: #f1f1f1; /* Add hover effect */
   }
   
   .category-list .dropdown {
-   
+    
+    
     background-color: #f9f9f9;
+
   }
   
   .category-list .dropdown-item {
@@ -111,7 +129,7 @@
   /* Icon Styling */
   .icon {
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 50px;
     color: #2a4780;
   }
 
@@ -161,13 +179,13 @@
   @media (max-width: 768px) {
     /* Change category-box width on smaller screens */
     .category-box {
-      top: 20%;
+      top: 5px;
       width: 200px; /* Slightly smaller sidebar */
       
     }
 
     
-    
+
     
   
     .category-header {
@@ -181,7 +199,7 @@
     }
     .category-list{
       
-      height: 69.5vh;
+      height: 100vh;
     }
   
     .icon {
@@ -193,8 +211,9 @@
     /* Adjust sidebar width even more on very small screens */
     .category-box {
       width: 37%; /* Full width on very small screens */
+      position: fixed;
       
-      top: 5.8%; /* Make the sidebar not fixed */
+      top: 5.7%; /* Make the sidebar not fixed */
     }
     
   
@@ -213,6 +232,6 @@
     }
   
     .icon {
-      font-size: 12px; /* Even smaller icons */
+      font-size: 14px; /* Even smaller icons */
     }
   }

@@ -1,5 +1,3 @@
-
-
 /* Adjust category-box for toggle functionality */
 .category-box {
   position: fixed;
@@ -9,7 +7,6 @@
   width: 250px;
   background-color: #fff;
   transition: left 0.3s ease;
-  
   filter: drop-shadow(0 8px 8px rgb(0, 0, 0));
 }
 
@@ -18,12 +15,7 @@
   left: 0; /* Slide into view */
 }
 
-
-
-
-
 .category-list {
-  
   padding: 0;
   margin: 0;
   height: 79.9vh;  /* Adjust the height as needed */
@@ -37,6 +29,8 @@
     text-decoration: none;
     border-bottom: 1px solid #000000;
     
+    
+    
   }
 
   .sidebar-option1
@@ -46,14 +40,19 @@
     
   }
 
+  
+
   .category-list i{
     padding-left: 50px;
-    justify-content: end;
+    
   }
 
   .category-list p{
     color: black;
     font-size: 0.3cm;
+    margin-left: 4px;
+    
+    
   }
 
   /* Header Styling */
@@ -75,7 +74,7 @@
     transition: background-color 0.3s ease;
   }
   .category-list .sidebar-option1 {
-    background-color: #d1d1d1;
+    background: #ddd;
     display: flex;
     align-items: center;
     border-bottom: 1px solid black;
@@ -83,16 +82,16 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+  .category-list .sidebar-option1:hover {
+    background-color: #f1f1f1; /* Add hover effect */
+  }
   
   .category-list .sidebar-option:hover {
     background-color: #f1f1f1; /* Add hover effect */
   }
   
   .category-list .dropdown {
-    
-    
-    background-color: #f9f9f9;
-
+    background-color: #000000;
   }
   
   .category-list .dropdown-item {
@@ -149,7 +148,6 @@
 }
 
 .dark-mode .category-list p{
-  
   color: white;
 }
 
@@ -162,9 +160,22 @@
 .dark-mode .category-list .sidebar-option:hover {
   background-color: #444444; /* Darker hover effect */
 }
+.dark-mode .category-list .sidebar-option1 {
+  background-color: #342d2d; /* Dark background for menu items */
+ 
+  border-bottom: 1px solid #8a8a8a;
+}
 
-.dark-mode .category-list .dropdown {
-  background-color: #222222;
+.dark-mode .category-list .sidebar-option1:hover {
+  background-color: #444444; /* Darker hover effect */
+}
+
+.dark-mode .dropdown {
+  background-color: #444444;
+}
+
+.dark-mode .dropdown:hover {
+  background-color: #907373;
 }
 
 .dark-mode .category-list .dropdown .sidebar-option:hover {

@@ -1,12 +1,12 @@
 /* Main container */
 .member-container {
-    position: fixed;
+    position: relative;
     top: 89px;
-    width: 100%;
-    
+    width: 83%;
     background: white;
     padding: 20px;
     height: 100vh;
+    margin-left: 250px;
     font-family: Arial, sans-serif;
     transition: margin-left 0.3s ease; /* Smooth transition */
   }
@@ -19,23 +19,22 @@
 
 
   .member-container.sidebar-active {
-    margin-left: 250px; /* Adjusted for the sidebar width */
-    width: 84%;
+    margin-left: 0; /* Adjusted for the sidebar width */
+    width: 100%;
   }
   
 
   /* Sidebar Styling */
   .sidebar {
     position: fixed;
-    top: 89px; /* Align with header */
+    top: 0; /* Align with header */
     left: -250px; /* Initially hidden */
-    width: 84%;
-    height: 84%;
-    
+    width: 250px;
+    height: auto;
     background-color: #0288d1;
     color: white;
     transition: left 0.3s ease; /* Smooth slide-in transition */
-    z-index: 99; /* Ensure it is above other content */
+    z-index: 100; /* Ensure it is above other content */
     padding: 20px;
   }
   

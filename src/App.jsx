@@ -9,6 +9,7 @@ import Office from "./Office/Office";
 import Membersearch from "./Membersearch/Membersearch";
 import Membergroup from "./MemberGroup/Membergroup";
 import MemberGroupAdd from "./MemberGroupAdd/MemberGroupAdd";
+import AddMessage from "./AddMessage/AddMessage";
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
   const navi3 = Location.pathname==="/Membersearch"
   const navi4 = Location.pathname==="/Membergroup"
   const navi5 = Location.pathname==="/MemberGroupAdd"
+  const navi6 = Location.pathname==="/AddMessage"
   
  
 
@@ -35,6 +37,8 @@ const App = () => {
       {navi4 && <Category/>}
       {navi5 && <Header/>}
       {navi5 && <Category/>}
+      {navi6 && <Header/>}
+      {navi6 && <Category/>}
       <Routes>
         <Route path="/" element={<Login/>}/>
         <Route path="/Chart" element={<Chart />} />
@@ -42,6 +46,8 @@ const App = () => {
         <Route path="/Membersearch" element={<Membersearch/>} />
         <Route path="/Membergroup" element={<Membergroup/>} />
         <Route path="/MemberGroupAdd" element={<MemberGroupAdd/>} />
+        <Route path="/AddMessage" element={<AddMessage/>} />
+
 
 
 

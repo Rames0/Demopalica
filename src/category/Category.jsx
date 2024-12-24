@@ -69,25 +69,41 @@ const Category = () => {
             </NavLink>
           </div>
         )}
-        
 
-        {/* Communication */}
-        <NavLink to="/communication" className="sidebar-option" >
+        <div className={`sidebar-option ${openDropdown === 2 ? "open" : ""}`}
+          onClick={() => toggleDropdown(2)}
+        >
           <span>📞</span>
           <p>संचार</p>
-        </NavLink>
+          <i className={`fa ${openDropdown === 2 ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
+        </div>
+        {openDropdown === 2 && (
+          <div className="dropdown">
+            <NavLink to="/AddMessage" className="sidebar-option1" >
+            <FontAwesomeIcon icon={faUsers}/>
+              <p>निर्देशन</p>
+            </NavLink>
+            <NavLink to="/Membersearch" className="sidebar-option1" >
+            <FontAwesomeIcon icon={faSearch} color="green" />
+              <p>गुनासो </p>
+            </NavLink>
+          </div>
+        )}
+        
+
+        
         
 
         {/* Admin Dropdown */}
         <div
-          className={`sidebar-option ${openDropdown === 2 ? "open" : ""}`}
-          onClick={() => toggleDropdown(2)}
+          className={`sidebar-option ${openDropdown === 3 ? "open" : ""}`}
+          onClick={() => toggleDropdown(3)}
         >
           <span>💻</span>
           <p>प्रशासन अभिलेख</p>
-          <i className={`fa ${openDropdown === 2 ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
+          <i className={`fa ${openDropdown === 3 ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
         </div>
-        {openDropdown === 2 && (
+        {openDropdown === 3 && (
           <div className="dropdown">
             <NavLink to="/admin/registration" className="sidebar-option1" >
               <p>दर्ता / चलानी</p>
@@ -104,14 +120,14 @@ const Category = () => {
 
         {/* Justice Dropdown */}
         <div
-          className={`sidebar-option ${openDropdown === 3 ? "open" : ""}`}
-          onClick={() => toggleDropdown(3)}
+          className={`sidebar-option ${openDropdown === 4 ? "open" : ""}`}
+          onClick={() => toggleDropdown(4)}
         >
           <span>⚖️</span>
           <p>न्याय</p>
-          <i className={`fa ${openDropdown === 3 ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
+          <i className={`fa ${openDropdown === 4 ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
         </div>
-        {openDropdown === 3 && (
+        {openDropdown === 4 && (
           <div className="dropdown">
             <NavLink to="/justice/court" className="sidebar-option1" >
               <p>अदालत</p>

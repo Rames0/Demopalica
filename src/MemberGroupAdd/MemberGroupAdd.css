@@ -1,19 +1,51 @@
 .MemberGroupAdd {
-    padding: 20px;
-    background-color: white;
-    max-width: 82%;
-    position: relative;
-    top: 85px;
-    left: 250px;
-    z-index: 99;
-    transition: margin-left 0.3s ease;
-    
-  }
+  padding: 20px;
+  background-color: white;
+  width: 83%;
+  position: relative;
+  top: 85px;
+  margin-left: 250px;
+  z-index: 99;
+  transition: margin-left 0.3s ease;
+}
+.dark-mode .MemberGroupAdd {
+  background: #000000;
+  color:white;
+}
+
+.dark-mode .Addtable-container {
+  background: #000000;
+  color:white;
+}
+
+.dark-mode .MemberAddform {
+  background: #000000;
+  color:white;
+}
+
+.MemberGroupAdd.sidebar-active {
+  margin-left: 0; /* When sidebar is toggled, reset margin for full visibility */
+  width: 100%;;
   
-  .MemberGroupAdd .sidebar-active{
-    margin-left: 500px;
-    width: 100%;
-  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #343a40;
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 100;
+}
+
+.sidebar-active .sidebar {
+  left: 0; /* Sidebar slides into view when active */
+  
+}
+
   
   h2, h3 {
     text-align: center;
@@ -89,13 +121,50 @@
   }
 
 
-  /* @media (max-width: 768px){
-    
+
+  
+  
+  table, th, td {
+    border: 1px solid #ddd;
   }
-
-  @media (max-width: 480px){
-    .MemberGroupAdd{
-        
-    }  
-
-  } */
+  
+  th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .MemberGroupAdd {
+      margin-left: 0;
+      top: 70px; /* Adjust for smaller header height */
+      padding: 10px;
+    }
+  
+    
+  
+    .MemberAddform {
+      grid-template-columns: 1fr; /* Stack form fields vertically on smaller screens */
+      gap: 15px;
+    }
+  
+    table {
+      font-size: 14px; /* Adjust table font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    
+  
+    .MemberGroupAdd {
+      padding: 5px;
+    }
+  
+    input, button {
+      font-size: 12px; /* Adjust input and button sizes for better usability */
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  }
+  

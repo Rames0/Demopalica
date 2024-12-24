@@ -1,24 +1,37 @@
-/* Corrected Sidebar Active State */
-.tol-container.sidebar-active {
-    margin-left: 250px;
-    width: 83.55%;
-    
-    
-  }
-  
   /* Main Container */
   .tol-container {
     position: absolute;
     size: 200% 200%;
-    width: 100%;
+    width: 83.55%;
     top: 90.5px;
     height: 100vh;
-    left: 0;
+    margin-left: 250px;
     padding: 20px;
     text-align: center;
     background: white;
     font-family: Arial, sans-serif;
     transition: margin-left 0.3s ease; /* Smooth transition for sidebar */
+  }
+/* Corrected Sidebar Active State */
+.tol-container.sidebar-active {
+    margin-left: 0;
+    width: 100%;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 100;
+  }
+  
+  .sidebar-active .sidebar {
+    left: 0; /* Sidebar slides into view when active */
+    
   }
   
 

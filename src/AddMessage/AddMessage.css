@@ -1,6 +1,6 @@
 .admes {
   position: relative;
-    padding: 20px;
+    padding: 40px;
     background-color: white;
     width: 80%;
     top: 85px;
@@ -37,30 +37,37 @@
     margin-bottom: 20px;
   }
   
-  .form-group {
-    margin-bottom: 15px;
-  }
-
-  
-  .rad{
+  .form-gro {
     display: flex;
-    gap: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    gap: 20px;
   }
 
-  .rad input{
-    display: flex;
+  .form-gro1 {
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  
+
+  .form-gro1 input{
+    margin-top: 20px;
+    gap: 20px;
+    display: inline;
+    
+
+    
   }
 
   
   
-  label {
+  .form-gro,.form-gro1 label {
     font-weight: bold;
+    font-size: 0.4cm;
+    
     
     
   }
   
-  input,
   textarea,
   select {
     width: 100%;
@@ -84,23 +91,10 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
-  
-  
-
-
-.special-message-container {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  
-  
   input[type="file"] {
     margin-top: 5px;
+    width: 100%;
+    border: 1px solid black;
   }
 
   
@@ -121,4 +115,59 @@
   .btn-secondary:hover {
     background-color: #495057;
   }
+
+  .dark-mode .admes{
+    background: black;
+    color: white;
+  }
+
+  .dark-mode .form-gro input {
+    background: black;
+    color: white;
+    border: 0.5px solid white ;
+  }
+  .dark-mode .form-gro textarea {
+    background: black;
+    color: white;
+    border: 0.5px solid white ;
+  }
   
+  .dark-mode .form-gro2 input {
+    background: black;
+    color: white;
+    border: 0.5px solid white ;
+  }
+
+  .dark-mode .admes label{
+    font-size: 0.4cm;
+  }
+
+  @media (max-width: 768px) {
+    .admes{
+      width: 100%;
+      top: 47px;
+      margin-left: 0;
+    }
+
+    .admes.sidebar-active {
+      margin-left: 152px; /* When sidebar is toggled, reset margin for full visibility */
+      width: 55%;;
+      
+    }  
+    
+  }
+  
+  @media (max-width: 480px) {
+    .admes{
+      width: 100%;
+      top: 47px;
+      margin-left: 0;
+    }
+
+    .admes.sidebar-active {
+      margin-left: 140px; /* When sidebar is toggled, reset margin for full visibility */
+      width: 55%;;
+      
+      
+    }  
+  }

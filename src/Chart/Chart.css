@@ -16,6 +16,7 @@
   }
   
   
+  
   .chart-container.menu-active {
    margin-left: 0;
    width: 100%;
@@ -105,7 +106,7 @@
     .chart{
       padding: 5px;
       background: white;
-      width: 272px;
+      width: 290px;
       
       margin-left: -50px ;
       border: 1px solid rgb(0, 0, 0);
@@ -140,8 +141,8 @@
     }
     .chart-container{
       position: relative;
-      margin-left: 75px;
-      width: 50%;
+      margin-left: 53px;
+      width: 0%;
       top: -3px;
       height: auto;
       bottom: 1px;
@@ -181,7 +182,7 @@
   color: #333;
 }
 .dark-mode .other{
-  background: black;
+  background: rgb(0, 0, 0);
   color: white;
 }
 
@@ -220,17 +221,35 @@
   border: 1px solid #ffffff;
 }
 
+.dark-mode .info h1{
+  
+  color: white;
+}
+.dark-mode .info1 h1{
+  
+  color: white;
+}
+.dark-mode .info2 h1{
+  
+  color: white;
+}
+
+.dark-mode .info3 h1{
+  
+  color: white;
+}
+
 
 
 
 .info h1,
 .info1 h1,
-.info2 h1 {
+.info2 h1,.info3 h1 {
   align-content: center;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 14px;
-  color: #333;
+  color: #000000;
 }
 
 .today-total-wrapper {
@@ -326,8 +345,12 @@
     border: 1px solid rgb(0, 0, 0);
       
   }
+  .dark-mode .chart.menu-active{
+    background: black;
+    color: white;
+  }
   .other.menu-active{
-    background: white;
+    background: #000000;
     width: 100%;
     /* margin-left: -80px; */
     border: 1px solid rgb(0, 0, 0);
@@ -389,6 +412,9 @@
     
   }
 
+  .dark-mode .other{
+    background: #000000;
+  }
  
 
 

@@ -191,7 +191,7 @@
     /* Change category-box width on smaller screens */
     .category-box {
       top: 5px;
-      width: 200px; /* Slightly smaller sidebar */
+      width: 150px; /* Slightly smaller sidebar */
       
     }
 
@@ -221,7 +221,7 @@
   @media (max-width: 480px) {
     /* Adjust sidebar width even more on very small screens */
     .category-box {
-      width: 37%; /* Full width on very small screens */
+      width: 32%; /* Full width on very small screens */
       position: fixed;
       
       top: 5.7%; /* Make the sidebar not fixed */

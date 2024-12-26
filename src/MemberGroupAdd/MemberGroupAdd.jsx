@@ -57,7 +57,7 @@ const MemberGroupAdd = () => {
       {/* Sidebar Toggle Button */}
       <div className="hamburger-icon">
         <button onClick={toggleSidebar} className="hamburger-toggle">
-          <i className={`fa ${isSidebarVisible ? "fa-times" : "fa-bars"}`}></i>
+          <i className={`fa ${isSidebarVisible ? "fa-bars" : "fa-times"}`}></i>
         </button>
       </div>
 
@@ -131,7 +131,7 @@ const MemberGroupAdd = () => {
         </form>
 
         {/* Table */}
-        <div className="Addtable-container">
+        <div className={`Addtable-container ${isSidebarVisible ? "sidebar-active" : ""}`}>
           <h3>टोल बिकास संस्थाहरु</h3>
           <table>
             <thead>
@@ -155,10 +155,12 @@ const MemberGroupAdd = () => {
                   <td>{entry.regDate}</td>
                   <td>{entry.estDate}</td>
                   <td>
+                    <div className="iconbtn">
                     <button className="btn btn-edit">✏️</button>
                     <button className="btn btn-delete" onClick={() => handleDelete(entry.id)}>
                       🗑️
                     </button>
+                    </div>
                   </td>
                 </tr>
               ))}

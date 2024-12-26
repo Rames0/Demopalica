@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './AddMessage.css'
+import DarkMode from "../DarkMode/DarkMode";
 
 const AddMessage = () => {
   const [formData, setFormData] = useState({
@@ -63,19 +64,20 @@ const AddMessage = () => {
       <h2>निर्देशन दिनुहोस्</h2>
       <form onSubmit={handleSubmit}>
         {/* Title */}
-        <div className="form-group">
-          <label>शिर्षक: *</label>
+        <div className="form-gro">
+          <label>शिर्षक:</label>
           <input
             type="text"
             name="title"
             value={formData.title}
             onChange={handleInputChange}
             required
+            style={{width:"100%"}}
           />
         </div>
 
         {/* Message */}
-        <div className="form-group">
+        <div className="form-gro">
           <label>सन्देश:</label>
           <textarea
             name="message"
@@ -86,54 +88,61 @@ const AddMessage = () => {
 
         {/* Media Type */}
         <div className="form-gro">
-          <div className="rad">
             <label>
-            मिडियो / लिङ्क
+            भिडियो/लिन्क
               <input
-              
                 type="radio"
                 name="mediaType"
                 value="मिडियो/लिङ्क"
                 checked={formData.mediaType === "मिडियो/लिङ्क"}
                 onChange={handleInputChange}
               />
-              
-              {/* <textarea
-            name="mediaInput"
-            placeholder="मिडियो/लिङ्क वा हाल्नुहोस्"
-            value={formData.mediaInput}
-            onChange={handleInputChange}
-          /> */}
-              
-              </label>
-            <label>
-            अर्को
-              <input
-                type="radio"
-                name="mediaType"
-                value="अर्को"
-                checked={formData.mediaType === "अर्को"}
+              {formData.mediaType === "मिडियो/लिङ्क" && (
+              <textarea
+                name="mediaInput"
+                placeholder="मिडियो/लिङ्क वा हाल्नुहोस्"
+                value={formData.mediaInput}
                 onChange={handleInputChange}
               />
-              
-            </label>
-            <label>
-            जनमत
-              <input
-                type="radio"
-                name="mediaType"
-                value="जनमत"
-                checked={formData.mediaType === "जनमत"}
+                )}
+                  </label>
+                <label>
+                अन्य 
+                  <input
+                    type="radio"
+                    name="mediaType"
+                    value="अर्को"
+                    checked={formData.mediaType === "अर्को"}
+                    onChange={handleInputChange}
+                  />
+                  
+                </label>
+                <label>
+                जनमत
+                  <input
+                    type="radio"
+                    name="mediaType"
+                    value="जनमत"
+                    checked={formData.mediaType === "जनमत"}
+                    onChange={handleInputChange}
+                  />
+                  {formData.mediaType === "जनमत" && (
+              <textarea
+                
+                name="mediaInput"
+                placeholder="मिडियो/लिङ्क वा हाल्नुहोस्"
+                value={formData.mediaInput}
                 onChange={handleInputChange}
               />
-              
-            </label>
-          </div>
-          
+                )}
+                  
+                </label>
         </div>
+          
+        
 
         {/* Category Purpose */}
-        <div className="form-group">
+        <div className="form-gro">
           <label>सन्देशको प्रकार छान्नुहोस्:</label>
           <select
             name="categoryPurpose"
@@ -146,7 +155,7 @@ const AddMessage = () => {
         </div>
 
         {/* Category Type */}
-        <div className="form-group">
+        <div className="form-gro">
           <label>सन्देशको प्रकार छान्नुहोस्:</label>
           <select
             name="categoryType"
@@ -159,12 +168,12 @@ const AddMessage = () => {
         </div>
 
         {/* Organization Scope */}
-        <div className="form-group">
+        <div className="form-gro1">
           <label>संस्थाको दायरा:</label>
           <div>
-            <label>
+            <label style={{marginRight:"15px"}}>
               <input
-                type="radio"
+                type="checkbox"
                 name="organizationScope"
                 value="सबै संस्था"
                 checked={formData.organizationScope === "सबै संस्था"}
@@ -172,15 +181,17 @@ const AddMessage = () => {
               />
               सबै संस्था
             </label>
-            <label>
+            <label >
               <input
-                type="radio"
+                type="checkbox"
                 name="organizationScope"
                 value="टोल विकास संस्थाको लागि"
                 checked={
                   formData.organizationScope === "टोल विकास संस्थाको लागि"
+                  
                 }
                 onChange={handleInputChange}
+                
               />
               टोल विकास संस्थाको लागि
             </label>
@@ -188,7 +199,7 @@ const AddMessage = () => {
         </div>
 
         {/* Organization Place */}
-        <div className="form-group">
+        <div className="form-gro">
           <label>स्थान संस्था:</label>
           <select
             name="organizationPlace"
@@ -201,14 +212,14 @@ const AddMessage = () => {
           </select>
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary" style={{marginBottom:"10px"}}>
           पेश गर्नुहोस्
         </button>
 
         
       <form onSubmit={handleSubmit}>
         {/* Special Message */}
-        <div className="form-group">
+        <div className="form-gro1">
           <label>विशेष सन्देश हो वा होइन?:</label>
           <div>
             <label>
@@ -235,7 +246,7 @@ const AddMessage = () => {
         </div>
 
         {/* File Upload */}
-        <div className="form-group">
+        <div className="form-gro1">
           <label>फाइल अपलोड</label>
           <input type="file" onChange={handleFileChange} />
           {file && <p>{file.name}</p>}

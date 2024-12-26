@@ -40,7 +40,7 @@
     color: white;
     height: 150vh;
   }
-
+  
   .more-section {
     margin-top: 20px;
   }
@@ -113,12 +113,21 @@
     .tol-container{
         top: 47px;
         background: white;
-        height: auto;
+        height: 130vh;
+        margin-left: 139px;
+        width: 65%;
+        
     }
     .tol-container.sidebar-active{
-      height: auto;
+      height: 130vh;
+     
+      width: 100%;
     } 
 
+    .more-button{
+      margin-bottom: 20PX;
+    }
+    
     .tol-grid {
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
@@ -141,12 +150,6 @@
   }
   
   @media (max-width: 480px) {
-
-
-    .tol-container.sidebar-active{
-        width: 63%;
-        left: -90px;
-    }
     .tol-grid {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }

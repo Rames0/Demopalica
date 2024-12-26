@@ -53,10 +53,11 @@ body {
 .headerdark {
   position: fixed; /* Position it relative to the viewport */
   top: 6px;/* Position it 10px from the top */
-  left: 70%; /* Center it horizontally */
+  left: 73%; /* Center it horizontally */
    /* Adjust position to make it perfectly centered */
   z-index: 1000;
   width: 10%;
+  
   
 }
 
@@ -101,7 +102,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-   
+  width: 50%;
   font-size: 16px;
 }
 

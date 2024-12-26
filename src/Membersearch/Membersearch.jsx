@@ -26,7 +26,7 @@ const Membersearch = () => {
       {/* Sidebar Toggle Button */}
       <div className="hamburger-icon">
         <button onClick={toggleSidebar} className="hamburger-toggle">
-          <i className={`fa ${isSidebarVisible ? "fa-times" : "fa-bars"}`}></i>
+          <i className={`fa ${isSidebarVisible ? "fa-bars" : "fa-times"}`}></i>
         </button>
       </div>
 
@@ -65,8 +65,8 @@ const Membersearch = () => {
         </div>
 
         {/* Table Section */}
-        <div className="table-section">
-          <div className="table-header">
+        <div className={`tables-section ${isSidebarVisible ? "sidebar-active" : ""}`}>
+          <div className="tables-header">
             <div>
               <label>Show</label>
               <select>
@@ -74,7 +74,7 @@ const Membersearch = () => {
                 <option value="50">50</option>
               </select>
             </div>
-            <div>
+            <div className="ser">
               <label>Search:</label>
               <input
                 type="text"
@@ -88,7 +88,7 @@ const Membersearch = () => {
               <button className="print-btn">Print</button>
             </div>
           </div>
-
+          <div className={`tables ${isSidebarVisible ? "sidebar-active" : ""}`}>
           <table>
             <thead>
               <tr>
@@ -117,6 +117,7 @@ const Membersearch = () => {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </>

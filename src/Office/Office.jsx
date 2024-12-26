@@ -15,7 +15,7 @@ const Office = () => {
     {/* Hamburger Button */}
     <div className="hamburger-icon">
     <button onClick={toggleSidebar} className="hamburger-toggle">
-    <i className={`fa ${isSidebarVisible ? 'fa-times' : 'fa-bars'}`}></i>
+    <i className={`fa ${isSidebarVisible ? 'fa-bars' : 'fa-times'}`}></i>
     </button>
     </div>
 

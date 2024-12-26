@@ -5,7 +5,7 @@
   .hamburger-icon {
     position: fixed;
     top: 22px;
-    left: 230px;
+    left: 210px;
     z-index: 101;
   }
   
@@ -54,6 +54,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 20px;
+  
   }
   
   .info-card {
@@ -93,12 +94,14 @@
   .card-title {
     font-size: 18px;
     margin-top: 10px;
+    color: #000000;
   }
   
   .card-number {
     font-size: 32px;
     font-weight: bold;
     margin-top: 10px;
+    color: #000000;
   }
   
   .section-heading {
@@ -143,10 +146,7 @@
 
 /* Tablets and Small Screens */
 @media (max-width: 768px) {
-  .main-content.sidebar-active {
-    
-    margin-left: 0; /* Disable sidebar margin on tablets */
-  }
+  
 
   .info-card {
     width: 45%; /* Two cards per row on tablets */
@@ -162,7 +162,7 @@
   .hamburger-icon {
     
     top: 2px;
-    left: 130px;
+    left: 120px;
   }
   
 }
@@ -170,13 +170,14 @@
 /* Mobile Devices */
 @media (max-width: 480px) {
   .main-content {
+    width: 100%;
     padding: 20px;
-    left: 50px;
+    margin-left: 140px;
     margin-top: 35px;/* Adjust space for smaller headers */
   }
   .main-content.sidebar-active {
-    
-    margin-left: 160px; /* Disable sidebar margin on tablets */
+    margin-left: 0;
+     /* Disable sidebar margin on tablets */
   }
 
   .info-card {
@@ -202,7 +203,7 @@
 
   .hamburger-icon {
     position: fixed;
-   left: 130px;
+   left: 12s0px;
   }
   
 }

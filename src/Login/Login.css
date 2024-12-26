@@ -237,9 +237,10 @@ body.dark-mode .forgot-password {
 }
 
 /* Heading styling */
-h2 {
+ .login-form h2 {
+    
     font-size: 22px;
-    color: #444;
+    color: #ffffff;
     margin-bottom: 15px;
     font-weight: bold;
 }
